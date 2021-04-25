@@ -35,6 +35,7 @@ namespace Main
         public MainGame(int x, int y, int b)
         {
             InitializeComponent();
+            button.Click += (object sender, RoutedEventArgs e) => Button_Click_1(sender, e, x, y, b, layout);
             a = new int[x + 2, y + 2];
             buts = new IButton[x + 2, y + 2];
             q = new Queues(x * y);
@@ -42,16 +43,32 @@ namespace Main
             bomb = b;
             this.x = x / 20;
             this.y = y / 20;
-            win.Height = x+(23*3);
+            win.Height = x + (23 * 3);
             win.Width = y;
-            Ui(layout, x/20, y/20);
-            Reset(x/20,y/20);
-            RandomBomb(x/20, y/20, b);
+            BeginGameProcess(x, y, b);
             //test(4,3);
             //test(6, 3);
             //test(2, 7);
             //test(6, 7);
             //test(7, 7);
+        }
+
+        private void BeginGameProcess(int x, int y, int b)
+        {
+            Ui(layout, x / 20, y / 20);
+            Reset(x / 20, y / 20);
+            RandomBomb(x / 20, y / 20, b);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e, int x, int y, int b, StackPanel layout)
+        {
+            DeleteGame(layout);
+            BeginGameProcess(x, y, b);
+        }
+
+        private void DeleteGame(StackPanel layout)
+        {
+            layout.Children.RemoveAt(1);
         }
 
         private void test(int bx, int by)
@@ -268,5 +285,7 @@ namespace Main
                     else 
                         buts[i, j].Background = Brushes.Black;
         }
+
+        
     }
 }

@@ -9,7 +9,8 @@
         Title="MainGame" Height="500" Width="600"
         ResizeMode="NoResize">
     <StackPanel x:Name="layout">
-        <Button Content=" S "
+        <Button x:Name="button"
+                Content=" S "
                 FontSize="20"
                 HorizontalAlignment="Center"/>
         

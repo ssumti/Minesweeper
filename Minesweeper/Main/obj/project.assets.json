@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tri\\Desktop\\Minesweeper\\Main\\Main.csproj",
+      "projectUniqueName": "C:\\Users\\Tri\\Documents\\GitHub\\Minesweeper\\Minesweeper\\Main\\Main.csproj",
       "projectName": "Main",
-      "projectPath": "C:\\Users\\Tri\\Desktop\\Minesweeper\\Main\\Main.csproj",
+      "projectPath": "C:\\Users\\Tri\\Documents\\GitHub\\Minesweeper\\Minesweeper\\Main\\Main.csproj",
       "packagesPath": "C:\\Users\\Tri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tri\\Desktop\\Minesweeper\\Main\\obj\\",
+      "outputPath": "C:\\Users\\Tri\\Documents\\GitHub\\Minesweeper\\Minesweeper\\Main\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
