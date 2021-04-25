@@ -83,36 +83,29 @@ namespace Main
         private void RandomBomb(int x, int y, int b)
         {
             Random random = new Random();
-            int i = 1;
-            while (i<=b)
+
+            int m = x * y;
+            Pos[] temp = new Pos[m];
+            for (int c = 0, i = 1; i <= x; ++i)
+                for (int j = 1; j <= y; ++j)
+                    temp[c++] = new Pos(i, j);
+
+            int cnt = 1;
+            while (cnt <= b)
             {
-                int h = random.Next(1, x);
-                int w = random.Next(1, y);
-                if (a[h,w]!=-1)
-                {
-                    a[h, w] = -1;
-                    ++i;
-                    if (a[h - 1, w - 1] != -1) 
-                    {
-                        ++a[h - 1, w - 1];
-                    }
-                    if (a[h - 1, w] != -1) 
-                    {
-                        ++a[h - 1, w];
-                    }
-                    if (a[h - 1, w + 1] != -1)
-                        ++a[h - 1, w + 1];
-                    if (a[h, w - 1] != -1)
-                        ++a[h, w - 1];
-                    if (a[h, w + 1] != -1)
-                        ++a[h, w + 1];
-                    if (a[h + 1, w - 1] != -1)
-                        ++a[h + 1, w - 1];
-                    if (a[h + 1, w] != -1)
-                        ++a[h + 1, w];
-                    if (a[h + 1, w + 1] != -1)
-                        ++a[h + 1, w + 1];
-                }
+                int p = random.Next(1, m);
+
+                int h = temp[p].GetX();
+                int w = temp[p].GetY();
+
+                for (int i = p; i < m - 1; ++i) temp[i] = temp[i + 1];
+                m--;
+
+                ++cnt;
+                a[h, w] = -1;
+
+                for (int i = 0; i < 8; ++i)
+                    if (a[h + posX[i], w + posY[i]] != -1) a[h + posX[i], w + posY[i]]++;
             }
         }
 

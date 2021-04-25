@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Tri\Documents\GitHub\Minesweeper\Minesweeper\Main\obj\Debug\net5.0-windows\
+C:\Users\admin\Documents\GitHub\Minesweeper\Minesweeper\Main\obj\Debug\net5.0-windows\
 Main
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\Tri\Documents\GitHub\Minesweeper\Minesweeper\Main\App.xaml
+C:\Users\admin\Documents\GitHub\Minesweeper\Minesweeper\Main\App.xaml
 4-494919583
 1146581190
 10-678108533
 193-1891726104
 MainGame.xaml;MainWindow.xaml;OutGame.xaml;Window1.xaml;
 
-False
+True
 
