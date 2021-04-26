@@ -232,11 +232,7 @@ namespace Main
             if (Condition())
             {
                 GameOver("win");
-            };
-
-            
-
-
+            }
         }
         private bool Condition()
         {

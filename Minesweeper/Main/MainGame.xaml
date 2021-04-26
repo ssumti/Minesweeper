@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Main"
         mc:Ignorable="d"
-        Title="MainGame" Height="500" Width="600"
+        Title="Minesweeper" Height="500" Width="600"
         ResizeMode="NoResize">
     <StackPanel x:Name="layout">
         <Button x:Name="button"
