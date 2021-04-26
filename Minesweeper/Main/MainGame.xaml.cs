@@ -212,7 +212,8 @@ namespace Main
                                 var xtemp = new Pos(temp.GetX() + posX[i], temp.GetY() + posY[i]);
                                 q.Enqueue(xtemp);
                             }
-                            else if (a[temp.GetX() + posX[i], temp.GetY() + posY[i]] != 0 && (a[temp.GetX() + posX[i], temp.GetY() + posY[i]] != -1))
+                            else 
+                            if (a[temp.GetX() + posX[i], temp.GetY() + posY[i]] != 0 && (a[temp.GetX() + posX[i], temp.GetY() + posY[i]] != -1))
                             {
                                 buts[temp.GetX() + posX[i], temp.GetY() + posY[i]].Content = a[temp.GetX() + posX[i], temp.GetY() + posY[i]];
                                 check[temp.GetX() + posX[i], temp.GetY() + posY[i]] = false;
